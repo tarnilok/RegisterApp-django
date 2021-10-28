@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h3><code>─── Student Delete ───</code></h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    Confirm to delete {{student.student_number}} - {{student.first_name}} {{student.last_name}}
+    <br>
+    <input class="btn btn-primary btn-md btn-block" type="submit" value="Yes">
+    <a href="{% url 'list' %}" class="btn btn-primary btn-md active btn-block" role="button" aria-pressed="true">Cancel</a>
+</form>
+    
+{% endblock container %}
+    

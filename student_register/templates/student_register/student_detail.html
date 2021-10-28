@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+{% block container %}
+<h3><code>─── Student Detail ───</code></h3>
+<img src="{{student.photo.url}}" alt="" />
+<div>
+  <div><b>First Name:</b> {{student.first_name | capfirst}}</div>
+  <div><b>Last Name:</b> {{student.last_name | capfirst}}</div>
+  <div><b>Number:</b> {{student.student_number}}</div>
+  <div><b>Gender:</b> {{student.gender | capfirst}}</div>
+  <div><b>Email:</b> {{student.email}}</div>
+  <div><b>Phone Number:</b> {{student.mobile_number}}</div>
+  <div><b>Path:</b> {{student.path | capfirst}}</div>
+</div>
+<div class="detailbuttons">
+    <a href="{% url 'edit' student.id %}" class="btn btn-primary btn-md active btn-block" role="button" aria-pressed="true"><i class="fas fa-edit"></i> Edit</a>
+    <a href="{% url 'delete' student.id %}" class="btn btn-primary btn-md active btn-block" role="button" aria-pressed="true"><i class="fas fa-trash"></i> Delete</a>
+</div>
+  {% endblock container %}
+

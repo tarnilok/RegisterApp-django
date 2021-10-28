@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <h3><code>─── Student List ───</code></h3>
+    <div class="listtop">
+        <div>
+            <h6><code>Total Number of Students: {{count}}</code></h6>
+            <h6><code>Page Number: {{page.number}}</code></h6>
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-primary"><a class="list" href="{% url 'add' %}">+ Add</a></button>
+        </div>
+    </div>
+    <ul>
+        {% for student in page.object_list  %}
+            <a class="list" href="{% url 'detail' student.id %}"><li>{{student.student_number}} - {{student.first_name | capfirst}} {{student.last_name | capfirst}}</li></a>
+            {% endfor %}              
+    </ul>
+    <div>    
+        {% if page.has_previous %}
+            <a class="list" href="{% url 'list' %}?page={{ page.previous_page_number }}">⬅</a>
+        {% endif %}
+        
+        {% if page.has_next %}
+            <a class="list" href="{% url 'list' %}?page={{ page.next_page_number }}">➡</a>      
+        {% endif %}         
+    </div>
+{% endblock container %}
+    
