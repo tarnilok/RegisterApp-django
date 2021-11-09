@@ -12,8 +12,8 @@
   <div><b>Path:</b> {{student.path | capfirst}}</div>
 </div>
 <div class="detailbuttons">
-    <a href="{% url 'edit' student.id %}" class="btn btn-primary btn-md active btn-block" role="button" aria-pressed="true"><i class="fas fa-edit"></i> Edit</a>
-    <a href="{% url 'delete' student.id %}" class="btn btn-primary btn-md active btn-block" role="button" aria-pressed="true"><i class="fas fa-trash"></i> Delete</a>
+    <a href="{% url 'edit' student.student_number %}" class="btn btn-primary btn-md active btn-block" role="button" aria-pressed="true"><i class="fas fa-edit"></i> Edit</a>
+    <a href="{% url 'delete' student.student_number %}" class="btn btn-primary btn-md active btn-block" role="button" aria-pressed="true"><i class="fas fa-trash"></i> Delete</a>
 </div>
   {% endblock container %}
 

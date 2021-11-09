@@ -13,7 +13,7 @@
     </div>
     <ul>
         {% for student in page.object_list  %}
-            <a class="list" href="{% url 'detail' student.id %}"><li>{{student.student_number}} - {{student.first_name | capfirst}} {{student.last_name | capfirst}}</li></a>
+            <a class="list" href="{% url 'detail' student.student_number %}"><li>{{student.student_number}} - {{student.first_name | capfirst}} {{student.last_name | capfirst}}</li></a>
             {% endfor %}              
     </ul>
     <div>    

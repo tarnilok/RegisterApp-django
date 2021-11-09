@@ -36,16 +36,16 @@ def student_register(request):
     }
     return render(request, 'student_register/student_register.html', context)
     
-def student_detail(request, id):
-    student = get_object_or_404(StudentInfo, id=id)
+def student_detail(request, slug):
+    student = get_object_or_404(StudentInfo, student_number=slug)
     context = {
         "student" : student
     }
     return render(request, "student_register/student_detail.html", context)
     
 
-def student_edit(request, id):
-    student = get_object_or_404(StudentInfo, id=id)
+def student_edit(request, slug):
+    student = get_object_or_404(StudentInfo, student_number=slug)
     form = StudentForm(instance=student)
     if request.method == "POST":
         form = StudentForm(request.POST, request.FILES, instance=student)
@@ -61,8 +61,8 @@ def student_edit(request, id):
     }  
     return render(request, 'student_register/student_edit.html', context)  
 
-def student_delete(request, id):
-    student = get_object_or_404(StudentInfo, id=id)
+def student_delete(request, slug):
+    student = get_object_or_404(StudentInfo, student_number=slug)
     if request.method == "POST":
         student.delete()
         messages.success(request, "Student deleted successfully")
