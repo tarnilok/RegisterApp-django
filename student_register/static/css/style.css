@@ -6,18 +6,17 @@
 
 .container {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
 }
 .box {
-    margin-top: 2rem;
+    margin-top: 5rem;
     height: max-content;
     background-color:whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-bottom: .5rem;
 }
 img {

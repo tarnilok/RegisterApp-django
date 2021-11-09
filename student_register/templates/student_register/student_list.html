@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block container %}
     <h3><code>─── Student List ───</code></h3>
     <div class="listtop">
@@ -18,11 +18,11 @@
     </ul>
     <div>    
         {% if page.has_previous %}
-            <a class="list" href="{% url 'list' %}?page={{ page.previous_page_number }}">⬅</a>
+            <a class="list h2"  href="{% url 'list' %}?page={{ page.previous_page_number }}">⬅</a>
         {% endif %}
         
         {% if page.has_next %}
-            <a class="list" href="{% url 'list' %}?page={{ page.next_page_number }}">➡</a>      
+            <a class="list h2"  href="{% url 'list' %}?page={{ page.next_page_number }}">➡</a>      
         {% endif %}         
     </div>
 {% endblock container %}

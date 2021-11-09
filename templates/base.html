@@ -12,12 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    {% if messages %} {% for message in messages %} {% if message.tags == 'success' %}
-    <div class="alert alert-success">{{ message }}</div>
+    <div>
+      {% if messages %} {% for message in messages %} {% if message.tags == 'success' %}
+    <div class="alert alert-primary alert-dismissible fade show container" style="width: 80%">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     {% elif message.tags == 'error' %}
-    <div class="alert alert-danger">{{ message }}</div>
+    <div class="alert alert-danger alert-dismissible fade show container" style="width: 80%">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     {% endif %} {% endfor %} {% endif %}
-    <div class="container">
+    </div>
+    <div class="container h-2">
       <div class="box">
         <nav class="navbar text-white">
           <h5>Welcome to the Student Information System</h5>
