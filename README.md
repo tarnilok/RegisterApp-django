@@ -1,1 +1,1 @@
-<h1 align='center'><code>STUDENT REGISTE APP</code></h1>
+<h1 align='center'><code>STUDENT REGISTER APP</code></h1>
