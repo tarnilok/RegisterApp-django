@@ -6,7 +6,7 @@
       Demo
     </a>
      | 
-    <a href="https://dashboard.heroku.com/apps/dj-proj-studentregisterapp">
+    <a href="https://dj-proj-studentregisterapp.herokuapp.com/">
       Heroku
     </a>
   </h3>
