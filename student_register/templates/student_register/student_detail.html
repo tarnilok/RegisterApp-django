@@ -1,7 +1,7 @@
 {% extends 'base.html' %} 
 {% block container %}
 <h3><code>─── Student Detail ───</code></h3>
-<img src="{{student.photo.url}}" alt="" />
+<img src="{{student.photo}}" alt="" />
 <div>
   <div><b>First Name:</b> {{student.first_name | capfirst}}</div>
   <div><b>Last Name:</b> {{student.last_name | capfirst}}</div>

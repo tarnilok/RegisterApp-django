@@ -22,7 +22,7 @@ class StudentInfo(models.Model):
     }
     
     path = models.CharField(max_length=20, choices=PATH)
-    photo = models.ImageField(upload_to="profile_photos/", default="avatar.png")
+    photo = models.URLField()
     
     def __str__ (self):
         return f"{self.student_number} - {self.first_name} {self.last_name}"
